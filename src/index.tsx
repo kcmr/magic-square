@@ -2,6 +2,15 @@
 import { render } from 'solid-js/web';
 
 import './index.css';
-import App from './App';
+import App, { SquareMatrix } from './App';
 
-render(() => <App />, document.getElementById('root') as HTMLElement);
+const demoSquares: SquareMatrix = [
+  [null, null, null],
+  [1, null, null],
+  [null, 1, null],
+];
+
+render(
+  () => <App squares={demoSquares} />,
+  document.getElementById('root') as HTMLElement
+);
